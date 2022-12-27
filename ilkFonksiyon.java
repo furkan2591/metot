@@ -17,7 +17,7 @@ public class ilkFonksiyon {
         for (int i=1; i<=exp; i++) {
             result*=base;
         }
-        System.out.println(result);  // her çarpma işleminin sonucunu fonsiyon içine yazdığımız burası aracılığıyla yazdırabildik.
+        System.out.println(result);  // her çarpma işleminin sonucunu fonsiyon içine de yazdırabiliyoruz.
         return result;
 
 
