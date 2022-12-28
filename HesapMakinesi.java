@@ -5,6 +5,25 @@ public class HesapMakinesi {
     static void sum(int a, int b) {
         System.out.println("sonuç: "+ (a+b));
     }
+    static void exponent(int a, int b) {
+        int carp=1;
+        for(int i=0; i<b;i++) {
+            carp*=a;
+        }
+        System.out.println("sonuç: "+ carp);
+    }
+
+    static int divided(int a,int b){
+        if(b==0) {
+            System.out.println("b değeri sıfı olamaz");
+            return 9;                  /* BURASI ÇOK ÖNEMLİ!!! sout içerisine yalnızca verilecek mesajı yazdım.
+                                           Dolayısıyla, altındaki return 9; değerine bakmadan yalnızca mesajı yazdırdı */
+        }
+        System.out.println("bölme işlemi sonucu:"+(a/b));
+        return a/b;
+    }
+
+
     public static void main(String[] args) {
         Scanner inp = new Scanner(System.in);
         int select;
@@ -35,7 +54,12 @@ public class HesapMakinesi {
                     case 1:
                         sum(a, b);
                         break;
-
+                    case 4:
+                        exponent(a,b);
+                        break;
+                    case 6:
+                       divided(a,b);
+                        break;
                     default:
                         System.out.println("geçersiz işlem seçtiniz");
                         break;
